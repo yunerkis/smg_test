@@ -1,0 +1,235 @@
+// All the styles
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+// Hero styles
+.hero {
+  &__container {
+    align-items: center;
+    background-color: var(--color-primary);
+    display: flex;
+  }
+  &__logo {
+    padding: .5rem 6rem;
+  }
+  &__phone {
+    color: var(--color-white);
+    padding: .5rem 6rem;
+    text-align: right;
+    span {
+      color:var(--color-primaryLight);
+    }
+  }
+  &__rates {
+    background: var(--color-dark-grey);
+    position: absolute;
+    top: 8rem;
+    right: 8rem;
+    width: 25rem;
+    height: auto;
+    border-radius: .5rem;
+    border: .3rem solid var(--color-primaryLight);
+    padding: 2rem;
+  }
+  &__box {
+    font-size: 2rem;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__box-two {
+    @extend .hero__box;
+    font-size: 1.5rem;
+  }
+  &__input {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primaryLight);
+
+    &--label {
+      font-weight: bold;
+    margin-bottom: .5rem;
+    }
+
+    input {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-radius: .5rem;
+      border: 3px solid var(--color-primaryLight);
+    }
+  }
+  &__purchase {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  &__box {
+    text-align: center;
+    margin-top: 7rem;
+    color: var(--color-primary);
+  }
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  &__subtitle {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+    color: var(--color-primary);
+  }
+  &__number {
+    font-size: 3rem;
+    border-radius: 5rem;
+    border: 2px solid var(--color-primaryLight);
+    width: 4.3rem;
+    text-align: center;
+  }
+  &__shadow {
+    background: #f6f6f6;
+    height: 4rem;
+    border-radius: 50%;
+    margin-top: -4rem;
+    width: auto;
+  }
+  &__center {
+    text-align: center;
+  }
+}
+
+.footer {
+  background-color: var(--color-primary);
+  padding: 3rem 10rem;
+  text-align: center;
+  &__text {
+    color: var(--color-grey);
+    font-size: .8rem;
+  }
+  &__contact {
+    margin-top: 2rem;
+    color: var(--color-grey);
+    font-size: .8rem;
+  }
+  &__links {
+    a {
+      color: var(--color-primaryLight);
+      text-decoration: none;
+      border-right: 1px solid var(--color-grey);
+      padding-right: .4rem;
+    }
+  }
+}
+
+// Stylr for classes
+
+@media (max-width: 770px) and (orientation: landscape) {
+  // Hero
+  .hero {
+    &__rates {
+      top: 8rem;
+      right: 3rem;
+      width: 20rem;
+      padding: 1rem;
+    }
+    &__box {
+      font-size: 1.3rem;
+    }
+    &__box-two {
+      font-size: 1rem;
+    }
+    &__img {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+  // Container
+  .container {
+    width: 100%;
+    &__img {
+      width: 15rem;
+    }
+    &__box {
+      display: none;
+    }
+  }
+  .top {
+    margin-top: 12rem;
+  }
+  // Footer
+  .footer {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px){
+  .hero {
+    &__bg {
+      display: none;
+    }
+    &__logo {
+      text-align: center;
+    }
+    &__rates {
+      position: static;
+      border-radius: 0;
+      border: 0;
+      width: auto;
+    }
+    &__container {
+      display: inline-block;
+      padding: 1rem 0;
+      width: 100%;
+    }
+    &__phone {
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid var(--color-primaryLight);
+      border-radius: 0.5rem;
+      width: 50%;
+      margin: 1rem auto;
+    }
+  }
+
+  .container {
+    &__center {
+      display: none;
+    }
+    &__paragraph {
+      text-align: justify;
+    }
+    &__box {
+      margin-top: 0;
+    }
+    &__title {
+      font-size: 2.3rem;
+    } 
+    &__subtitle {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .footer {
+    padding: 1rem;
+  }
+}
